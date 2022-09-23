@@ -10,6 +10,8 @@
  * @link       https://fuelphp.com
  */
 
+use Fuel\Core\Route;
+
 return array(
 	/**
 	 * -------------------------------------------------------------------------
@@ -39,4 +41,13 @@ return array(
 	 */
 
 	'hello(/:name)?' => array('welcome/hello', 'name' => 'hello'),
+
+	//test route
+	'about' => 'employee/home', 
+	'employee/request(/:name)?' => array('employee/request', 'name' => 'name'), // route with param
+
+	// 'employee' => array(
+	// 	array('GET', new Route('employee/all')), 
+	// 	array('POST', new Route('employee/create'))
+	// ), 
 );
