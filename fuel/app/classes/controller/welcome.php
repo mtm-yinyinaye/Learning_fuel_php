@@ -10,6 +10,8 @@
  * @link       https://fuelphp.com
  */
 
+use Model\welcome;
+
 /**
  * The Welcome Controller.
  *
@@ -29,7 +31,10 @@ class Controller_Welcome extends Controller
 	 */
 	public function action_index()
 	{
-		return Response::forge(View::forge('welcome/index'));
+		// return Response::forge(View::forge('welcome/index'));
+		$result = welcome::get_results();
+		echo $result;
+		echo "Testing Model";
 	}
 
 	/**
